@@ -10,8 +10,8 @@ If any of the above are not true then the check will fail.
 
 This application uses the following environment variables for authenticating with Jira.
 
-JIRA_USER_NAME: This should be set to your Jira username
-JIRA_API_KEY: This should be set to your Jira API key
+`JIRA_USER_NAME`: This should be set to your Jira username
+`JIRA_API_KEY`: This should be set to your Jira API key
 
 To print out the application usage you can run the application with the `-help` option.
 
@@ -32,12 +32,12 @@ Commit message for ticket id KT-1 is valid
 An example of a ticket that is not assigned can be found below.
 
 ```
-kevinhartwig@kevins-mbp part2-commit-msg-validation % ./check-commit-message -commit-msg "KT-1: This is a test of a valid ticket"
-Commit message for ticket id KT-1 is valid
+kevinhartwig@kevins-mbp part2-commit-msg-validation % ./check-commit-message -commit-msg "KT-2: This is a test of a ticket not assigned" 
+Ticket is unassigned
 ```
 
 An example of a ticket that is not in the `Approved` status can be found below.
 ```
-kevinhartwig@kevins-mbp part2-commit-msg-validation % ./check-commit-message -commit-msg "KT-1: This is a test of a valid ticket"
-Commit message for ticket id KT-1 is valid
+kevinhartwig@kevins-mbp part2-commit-msg-validation % ./check-commit-message -commit-msg "KT-3: This is a test of a ticket not in Approved"
+Status is not in approved state: Backlog
 ```
